@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./reset.css" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
-    <title>La crêpologie</title>
-</head>
-<body>
-    
-    <script src="./app.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./reset.css" rel="stylesheet">
+        <link href="./style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+        <title>La crêpologie</title>
+    </head>
+    <body>
+        <div id="app-container">
+            <h1 id="main-title">la crêpologie</h1>
+            <div id="white-circle">
+                <h2 id="main-description">old but gold</h2>
+                <img id="crepe" src="crepe.svg" alt="image de crepe" height="180px" width="180px">
+            </div>
+            <div id="slider">
+                <div class="slides">
+                    <h1 class="recipe-title">Pâte à crêpes classique</h1>
+                    <p class="select-option">je veux/j'ai</p>
+                    <div class="quantities">
+                        <input type="text" placeholder="Quantités">
+                        <select class="ingredients" name="ingredients">
+                            <option value="floor">g de farine</option>
+                            <option value="milk">mL de lait</option>
+                            <option value="eggs">oeufs</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./classic.js"></script>
+        <script src="./app.js"></script>
+    </body>
 </html>
