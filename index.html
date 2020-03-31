@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./reset.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="swiper.min.css">
         <link href="./style.css" rel="stylesheet">
         <title>La crêpologie</title>
@@ -32,18 +33,28 @@
                                 <option value="crepe">crêpes</option>
                             </select>
                         </div>
-                        <!-- <div>
-                            <p>Avec 500 g de farine, je peux faire 24 crêpes</p>
-                            <h3 class="recipe-title-open">Ingrédients</h3>
-                            <ul>
+                        <!-- A cacher -->
+                        <div class="menu-open">
+                            <p>Avec 500 g de farine,</p>
+                            <p>je peux faire 24 crêpes</p>
+                            <h3 class="recipe-title-open">ingrédients</h3>
+                            <ul class="recipe-ul-open">
                                 <li><span class="quantity-floor">500</span><span class="ingredient-floor"> g de farine</span></li>
                                 <li><span class="quantity-floor">1</span><span class="ingredient-floor"> L de lait de vache</span></li>
                                 <li><span class="quantity-floor">6</span><span class="ingredient-floor"> oeufs</span></li>
                                 <li><span class="quantity-floor">2</span><span class="ingredient-floor"> cuillère à soupe d'huile végétale</span></li>
                                 <li><span class="quantity-floor">2</span><span class="ingredient-floor"> pincées de sel</span></li>
                             </ul>
-    
-                        </div> -->
+                            <h3 class="recipe-title-open">préparation</h3>
+                            <ul class="recipe-ul-open">
+                                <li> Dans un cul de poule, faire un puit avec la farine</li>
+                                <li>Ajouter les oeufs un par un et mélanger au fur et à mesure.</li>
+                                <li>Incorporer le lait de vache à la préparation petit à petit jusqu’à optenir une pâte fluide, ni trop liquide, ni trop épaisse.</li>
+                                <li>Ajouter le sel et l’huile.</li>
+                                <li>Laisser reposer la pâte au moins 1 heure.</li>
+                            </ul>
+                        </div>
+                        <!-- A cacher -->
                         <button class="button">Go</button>
                     </div>
                     <div class="slides swiper-slide">
@@ -89,6 +100,8 @@
                         <button class="button">Go</button>
                     </div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
         <script src="swiper.min.js"></script>

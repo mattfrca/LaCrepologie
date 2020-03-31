@@ -1,9 +1,12 @@
 body {
     background-color: #FEDD9C;
+    font-size: 16px;
 }
 
 #app-container {
     height: 100vh;
+    width: 100vw;
+    position: relative;
 }
 #title-container {
     width: 100vw;
@@ -18,7 +21,7 @@ body {
     font-family: 'Yeseva One', cursive;
     color: white;
     text-decoration: underline;
-    margin: 1em auto;
+    margin: .5em auto .8em;
 }
 
 #white-circle {
@@ -37,8 +40,8 @@ body {
     font-weight: bold;
     font-size: 3.5em;
     position: absolute;
-    top: 50px;
-    left: 150px;
+    top: 60px;
+    left: 120px;
     z-index: 3;
     margin-left: 1em;
     user-select: none;
@@ -56,15 +59,22 @@ body {
 }
 .swiper-container {
     width: 100%;
-    padding: 20px 80px;
+    padding: 20px 50px;
+    position: absolute;
+    transition: top .8s;
+    /* top: 100px; */
+    /* top 100px si menu affiché; */
+}
+.swiper-button-next, .swiper-button-prev {
+    color: black;
 }
 .slides {
     margin: 1em auto;
-    width: 50%;
+    width: 60%;
     min-width: 300px;
     background-color: linen;
     border-radius: 30px 0;
-    padding: 1em 2em;
+    padding: 1em 1em;
 }
 
 .swiper-slide {
@@ -73,7 +83,7 @@ body {
 }
 .recipe-title {
     position: relative;
-    top: -2em;
+    top: -35.2px;
     margin: 0 auto;
     padding: 0.7em 1em;
     border-radius: 15px 0;
@@ -83,29 +93,37 @@ body {
     text-transform: uppercase;
     font-family: sans-serif;
     text-align: center;
-    z-index: 10;
+    z-index: 12;
 }
 .select-option {
     position: relative;
-    top: -0.8em;
+    top: -1.1em;
     text-align: center;
     color: #3C3527;
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 .quantities {
     text-align: center;
     color: #3c3527;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .quantity {
-    width: 35%;
+    width: 42%;
     border: none;
     color: #3C3527;
-    padding: 0.5em 0.3em;
+    padding: 0.6em 0.3em;
     text-align: right;
     font-weight: bold;
+    border-radius: 8px;
+    /* petit test; */
+    transition: font-size 0.3s;
+}
+.quantity:focus {
+    font-size: 1.2rem;
+    /* petit test; */
 }
 .quantity::placeholder {
     color: #3C3527;
@@ -124,14 +142,20 @@ body {
 .fourst {
     background-color: #ff7474;
 }
-
+.quantity:focus ~ .ingredients{
+    font-size: 1.2rem;
+    /* petit test; */
+}
 .ingredients {
-    width: 35%;
+    width: 42%;
     border: none;
     text-align: center;
     font-weight: bold;
     color: #3C3527;
     padding: 0.5em 0.3em;
+    border-radius: 8px;
+    /* petit test; */
+    transition: font-size 0.3s;
 }
 .button {
     position: relative;
@@ -142,7 +166,37 @@ body {
     border: none;
     background-color: black;
     color: white;
-    top: 1.8em;
+    top: 2.2em;
     margin: 0 auto;
+    transition: transform 0.5s;
 }
-
+.button:hover {
+    transform: scale(1.3);
+}
+.menu-open {
+    display: none;
+    padding: 1em 0 0;
+    color: #3C3527;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.menu-open p {
+    text-align: center;
+    font-style: italic;
+}
+.recipe-title-open {
+    display: inline-block;
+    border-top: 1px solid #3C3527;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1.5rem 0 .7rem;
+    padding: 1em 3em 0;
+}
+.recipe-ul-open {
+    text-align: left;
+    list-style: disc;
+    padding: 0 0 .2rem 1rem;
+    font-weight: normal;
+    line-height: 1.2rem;;
+}
