@@ -7,15 +7,21 @@ const app = {
     init: function () {
         // Ici, on définira quelle recette appeler
         
-        const button = document.querySelector('.button');
-        const input = document.querySelector('.quantity');
+        const buttonClassic = document.getElementsByClassName('button')[swiper.realIndex + 4];
+        const inputClassic = document.getElementsByClassName('quantities')[swiper.realIndex + 4];
 
-        input.addEventListener("input", app.handleChangeInput);
-        button.addEventListener("click", app.handleChangeQuantity);
+        console.log(buttonClassic);
+        console.log(inputClassic);
+        // ici on écoute l'input
+        inputClassic.addEventListener("input", app.handleChangeInput);
+        // ici on écoute le bouton "go"
+        buttonClassic.addEventListener("click", app.handleClickButton);
         
+        console.log(swiper.realIndex)
     },
 
     handleChangeInput: function (evt) {
+        console.log("test");
         evt.target.style.border = "lightgray solid 1px";
         const errorElt = document.querySelector('.error');
         if (errorElt) {
@@ -23,7 +29,7 @@ const app = {
         }
     },
 
-    handleChangeQuantity: function () {
+    handleClickButton: function (evt) {
         app.quantity = parseInt(document.querySelector('.quantity').value);
         app.ingredients = document.querySelector('.ingredients').value;
         
