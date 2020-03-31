@@ -1,5 +1,5 @@
 body {
-    background-color: #FED273;
+    background-color: #FEDD9C;
 }
 
 #app-container {
@@ -28,34 +28,45 @@ body {
     border-radius: 125px;
     position: relative;
     z-index: 1;
-    align-self: flex-start;
-    margin: 3em 0 2em 4em;
+    margin: 3rem 0 3rem;
 }
 #main-description {
-    color: grey;
+    color: black;
+    opacity: 0.5;
     font-weight: bold;
     font-size: 3.5em;
     position: absolute;
     top: 50px;
     left: 150px;
     z-index: 3;
-    margin-left: 16px;
+    margin-left: 1em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 #crepe {
     transform: rotate(-30deg);
     position: absolute;
     top: -30px;
     z-index: 2;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
-#slider {
+.swiper-container {
     width: 100%;
+    padding: 20px 80px;
 }
 .slides {
     margin: 1em auto;
-    width: 80%;
+    width: 90%;
     background-color: linen;
     border-radius: 30px 0;
     padding: 1em 2em;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
 }
 .recipe-title {
     position: relative;
@@ -67,17 +78,64 @@ body {
     background-color: #3C3527;
     color: linen;
     text-transform: uppercase;
-    font-family: 'Yeseva One', cursive;
+    font-family: sans-serif;
+    text-align: center;
+    z-index: 10;
 }
 .select-option {
     position: relative;
     top: -0.8em;
     text-align: center;
+    color: #3C3527;
+    font-family: 'Yeseva One', cursive;
 }
 
 .quantities {
     text-align: center;
     color: #3c3527;
+    display: flex;
+    justify-content: space-around;
+}
+.quantity {
+    width: 35%;
+    border: none;
+    color: #3C3527;
+    padding: 0.3em 0.6em 0.3em 0;
+    text-align: right;
+    font-weight: bold;
+}
+.quantity::placeholder {
+    color: #3C3527;
+    text-align: center;
+    font-weight: bold;
+}
+.first {
+    background-color: #FED16D;
+}
+.second {
+    background-color: #9EB3CF;
+}
+.third {
+    background-color: #AFF0A0;
+}
+.fourst {
+    background-color: #ff7474;
 }
 
+.ingredients {
+    width: 35%;
+    border: none;
+}
+.button {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    background-color: black;
+    color: white;
+    top: 1.8em;
+    margin: 0 auto;
+}
 

@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./reset.css" rel="stylesheet">
-        <link href="./style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="swiper.min.css">
+        <link href="./style.css" rel="stylesheet">
         <title>La crêpologie</title>
     </head>
     <body>
@@ -15,23 +16,70 @@
                 <h2 id="main-description">old but gold</h2>
                 <img id="crepe" src="crepe.svg" alt="image de crepe" height="180px" width="180px">
             </div>
-            <div id="slider">
-                <div class="slides">
-                    <h1 class="recipe-title">Pâte à crêpes classique</h1>
-                    <p class="select-option">je veux/j'ai</p>
-                    <div class="quantities">
-                        <input class="quantity" type="text" placeholder="Quantités">
-                        <select class="ingredients" name="ingredients">
-                            <option value="floor">g de farine</option>
-                            <option value="milk">mL de lait</option>
-                            <option value="eggs">oeufs</option>
-                            <option value="crepe">crêpes</option>
-                        </select>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="slides swiper-slide">
+                        <h1 class="recipe-title">Pâte à crêpes classique</h1>
+                        <p class="select-option">je veux/j'ai</p>
+                        <div class="quantities">
+                            <input class="quantity first" type="text" placeholder="Quantités">
+                            <select class="ingredients first" name="ingredients">
+                                <option value="floor">g de farine</option>
+                                <option value="milk">mL de lait</option>
+                                <option value="eggs">oeufs</option>
+                                <option value="crepe">crêpes</option>
+                            </select>
+                        </div>
+                        <button class="button">Go</button>
                     </div>
-                    <button class="button">Go</button>
+                    <div class="slides swiper-slide">
+                        <h1 class="recipe-title">Pâte à crêpes bretonne</h1>
+                        <p class="select-option">je veux/j'ai</p>
+                        <div class="quantities">
+                            <input class="quantity second" type="text" placeholder="Quantités">
+                            <select class="ingredients second" name="ingredients">
+                                <option value="floor">g de farine</option>
+                                <option value="milk">mL de lait</option>
+                                <option value="eggs">oeufs</option>
+                                <option value="crepe">crêpes</option>
+                            </select>
+                        </div>
+                        <button class="button">Go</button>
+                    </div>
+                    <div class="slides swiper-slide">
+                        <h1 class="recipe-title">Pâte à crêpes vegan</h1>
+                        <p class="select-option">je veux/j'ai</p>
+                        <div class="quantities">
+                            <input class="quantity third" type="text" placeholder="Quantités">
+                            <select class="ingredients third" name="ingredients">
+                                <option value="floor">g de farine</option>
+                                <option value="milk">mL de lait</option>
+                                <option value="eggs">oeufs</option>
+                                <option value="crepe">crêpes</option>
+                            </select>
+                        </div>
+                        <button class="button">Go</button>
+                    </div>
+                    <div class="slides swiper-slide">
+                        <h1 class="recipe-title">Pâte à crêpes au sirop d'érable</h1>
+                        <p class="select-option">je veux/j'ai</p>
+                        <div class="quantities">
+                            <input class="quantity fourst" type="text" placeholder="Quantités">
+                            <select class="ingredients fourst" name="ingredients">
+                                <option value="floor">g de farine</option>
+                                <option value="milk">mL de lait</option>
+                                <option value="eggs">oeufs</option>
+                                <option value="crepe">crêpes</option>
+                            </select>
+                        </div>
+                        <button class="button">Go</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <script src="swiper.min.js"></script>
+        <!-- https://github.com/nolimits4web/swiper -->
+        <script src="./swiper-init-events.js" />
         <script src="./validation.js"></script>
         <script src="./classic.js"></script>
         <script src="./app.js"></script>
