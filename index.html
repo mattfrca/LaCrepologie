@@ -13,7 +13,7 @@
     <body>
         <div id="app-container">
             <div id="title-container">
-                <h1 id="main-title">la crêpologie</h1>
+                <h1 id="main-title"><img src="lacrepologie_maquette_mobile.png" alt="Logo La crêpologie"></h1>
                 <div id="white-circle">
                     <h2 id="main-description">old but gold</h2>
                     <img id="crepe" src="crepe.svg" alt="image de crepe" height="160px" width="160px">
@@ -24,142 +24,155 @@
                     <div class="slides swiper-slide">
                         <h1 class="recipe-title">Pâte à crêpes classique</h1>
                         <p class="select-option">je veux/j'ai</p>
-                        <div class="quantities">
-                            <input class="quantity first" type="text" placeholder="Quantités">
-                            <select class="ingredients first" name="ingredients">
-                                <option value="floor">g de farine</option>
-                                <option value="milk">mL de lait</option>
-                                <option value="eggs">oeufs</option>
-                                <option value="crepe">crêpes</option>
-                            </select>
+                        <div>
+                            <div class="quantities">
+                                <input class="quantity first" type="text" placeholder="Quantités">
+                                <select class="ingredients first" name="ingredients">
+                                    <option value="flour">g de farine</option>
+                                    <option value="milk">mL de lait</option>
+                                    <option value="eggs">oeuf(s)</option>
+                                    <option value="crepe">crêpe(s)</option>
+                                </select>
+                            </div>
+                            <button class="button">Go</button>
                         </div>
+                            
                         <!-- A cacher -->
-                        <div class="menu-open">
+                        <div class="menu-open recipe-classic">
                             <p>Avec <span class="quantity-selected">500</span><span class="ingredient-selected"> g de farine</span>,</p>
-                            <p>je peux faire <span class="crepe-number">24</span> crêpes</p>
+                            <p>je peux faire <span class="crepe-number">24</span> crêpe(s)</p>
                             <h3 class="recipe-title-open">ingrédients</h3>
                             <ul class="recipe-ul-open">
-                                <li><span class="quantity-floor">500</span><span class="ingredient-floor"> g de farine</span></li>
-                                <li><span class="quantity-milk">1</span><span class="ingredient-milk"> L de lait de vache</span></li>
-                                <li><span class="quantity-eggs">6</span><span class="ingredient-eggs"> oeufs</span></li>
-                                <li><span class="quantity-oil">2</span><span class="ingredient-oil"> cuillère à soupe d'huile végétale</span></li>
-                                <li><span class="quantity-salt">2</span><span class="ingredient-salt"> pincées de sel</span></li>
+                                <li><span class="quantity-flour">500</span><span class="ingredient-flour"> g de farine</span></li>
+                                <li><span class="quantity-milk">1</span><span class="ingredient-milk"> mL de lait de vache</span></li>
+                                <li><span class="quantity-eggs">6</span><span class="ingredient-eggs"> oeuf(s)</span></li>
+                                <li><span class="quantity-oil">2</span><span class="ingredient-oil"> cuillère(s) à soupe d'huile végétale</span></li>
+                                <li><span class="quantity-salt">2</span><span class="ingredient-salt"> pincée(s) de sel</span></li>
                             </ul>
 
                             <h3 class="recipe-title-open">préparation</h3>
                             <ul class="recipe-ul-open">
-                                <li> Dans un cul de poule, faire un puit avec la farine</li>
-                                <li>Ajouter les oeufs un par un et mélanger au fur et à mesure.</li>
-                                <li>Incorporer le lait de vache à la préparation petit à petit jusqu’à optenir une pâte fluide, ni trop liquide, ni trop épaisse.</li>
-                                <li>Ajouter le sel et l’huile.</li>
-                                <li>Laisser reposer la pâte au moins 1 heure.</li>
+                                <li>Dans un cul de poule, faire un puit avec la farine</li>
+                                <li>Ajouter les oeufs un par un et mélanger au fur et à mesure</li>
+                                <li>Incorporer le lait de vache à la préparation petit à petit jusqu’à optenir une pâte fluide, ni trop liquide, ni trop épaisse</li>
+                                <li>Ajouter le sel et l’huile</li>
+                                <li>Laisser reposer la pâte au moins 1 heure</li>
                             </ul>
+                            <div class="arrow-top"><img src="./chevron-up.svg" alt="arrow-top" height="20px" width="20px"></div>
                         </div>
                         <!-- A cacher -->
-
-                        <button class="button">Go</button>
                     </div>
                     <div class="slides swiper-slide">
-                        <h1 class="recipe-title">Pâte à crêpes bretonne</h1>
+                        <h1 class="recipe-title">Galette bretonne</h1>
                         <p class="select-option">je veux/j'ai</p>
-                        <div class="quantities">
-                            <input class="quantity second" type="text" placeholder="Quantités">
-                            <select class="ingredients second" name="ingredients">
-                                <option value="floor">g de farine</option>
-                                <option value="milk">mL de lait</option>
-                                <option value="eggs">oeufs</option>
-                                <option value="crepe">crêpes</option>
-                            </select>
+                        <div>
+                            <div class="quantities">
+                                <input class="quantity second" type="text" placeholder="Quantités">
+                                <select class="ingredients second" name="ingredients">
+                                    <option value="flour">g de farine</option>
+                                    <option value="water">mL d'eau</option>
+                                    <option value="eggs">oeuf(s)</option>
+                                    <option value="crepe">crêpe(s)</option>
+                                </select>
+                            </div>
+                            <button class="button">Go</button>
                         </div>
-                        <div class="menu-open">
+                        <div class="menu-open recipe-bretonne">
+                            <p class="information">Attention ! Il est préférable d'utiliser de <span class="underline">la farine de sarrasin.</span></p>
                             <p>Avec <span class="quantity-selected">500</span><span class="ingredient-selected"> g de farine</span>,</p>
-                            <p>je peux faire <span class="crepe-number">24</span> crêpes</p>
+                            <p>je peux faire <span class="crepe-number">24</span> crêpes bretonnes</p>
                             <h3 class="recipe-title-open">ingrédients</h3>
                             <ul class="recipe-ul-open">
-                                <li><span class="quantity-floor">500</span><span class="ingredient-floor"> g de farine</span></li>
-                                <li><span class="quantity-milk">1</span><span class="ingredient-milk"> L de lait de vache</span></li>
-                                <li><span class="quantity-eggs">6</span><span class="ingredient-eggs"> oeufs</span></li>
-                                <li><span class="quantity-oil">2</span><span class="ingredient-oil"> cuillère à soupe d'huile végétale</span></li>
-                                <li><span class="quantity-salt">2</span><span class="ingredient-salt"> pincées de sel</span></li>
+                                <li><span class="quantity-flour">500</span><span class="ingredient-flour"> g de farine de sarrasin</span></li>
+                                <li><span class="quantity-water">1</span><span class="ingredient-water"> ml d'eau</span></li>
+                                <li><span class="quantity-eggs">6</span><span class="ingredient-eggs"> oeuf(s)</span></li>
+                                <li><span class="quantity-salt">2</span><span class="ingredient-salt"> pincée(s) de gros sel</span></li>
                             </ul>
                             <h3 class="recipe-title-open">préparation</h3>
                             <ul class="recipe-ul-open">
-                                <li> Dans un cul de poule, faire un puit avec la farine</li>
-                                <li>Ajouter les oeufs un par un et mélanger au fur et à mesure.</li>
-                                <li>Incorporer le lait de vache à la préparation petit à petit jusqu’à optenir une pâte fluide, ni trop liquide, ni trop épaisse.</li>
-                                <li>Ajouter le sel et l’huile.</li>
-                                <li>Laisser reposer la pâte au moins 1 heure.</li>
+                                <li>Dans un cul de poule, faire un puit avec la farine de sarrasin</li>
+                                <li>Ajouter le gros sel</li>
+                                <li>Ajouter l'eau au fur et à mesure et mélanger avec une cuillère en bois</li>
+                                <li>Quand vous avez une pâte fluide et épaisse, ajouter les oeufs un par un</li>
+                                <li>Laisser reposer la pâte au moins 2 heure en votre récipient</li>
                             </ul>
+                            <div class="arrow-top"><img src="./chevron-up.svg" alt="arrow-top" height="20px" width="20px"></div>
                         </div>
-                        <button class="button">Go</button>
                     </div>
                     <div class="slides swiper-slide">
                         <h1 class="recipe-title">Pâte à crêpes vegan</h1>
                         <p class="select-option">je veux/j'ai</p>
-                        <div class="quantities">
-                            <input class="quantity third" type="text" placeholder="Quantités">
-                            <select class="ingredients third" name="ingredients">
-                                <option value="floor">g de farine</option>
-                                <option value="milk">mL de lait</option>
-                                <option value="eggs">oeufs</option>
-                                <option value="crepe">crêpes</option>
-                            </select>
+                        <div>
+                            <div class="quantities">
+                                <input class="quantity third" type="text" placeholder="Quantités">
+                                <select class="ingredients third" name="ingredients">
+                                    <option value="flour">g de farine</option>
+                                    <option value="milk">mL de lait</option>
+                                    <option value="cornstarch">fécule de maïs</option>
+                                    <option value="crepe">crêpe(s)</option>
+                                </select>
+                            </div>
+                            <button class="button">Go</button>
                         </div>
-                        <div class="menu-open">
+                        <div class="menu-open recipe-vegan">
                             <p>Avec <span class="quantity-selected">500</span><span class="ingredient-selected"> g de farine</span>,</p>
-                            <p>je peux faire <span class="crepe-number">24</span> crêpes</p>
+                            <p>je peux faire <span class="crepe-number">24</span> crêpe(s)</p>
                             <h3 class="recipe-title-open">ingrédients</h3>
                             <ul class="recipe-ul-open">
-                                <li><span class="quantity-floor">500</span><span class="ingredient-floor"> g de farine</span></li>
-                                <li><span class="quantity-milk">1</span><span class="ingredient-milk"> L de lait de vache</span></li>
-                                <li><span class="quantity-eggs">6</span><span class="ingredient-eggs"> oeufs</span></li>
-                                <li><span class="quantity-oil">2</span><span class="ingredient-oil"> cuillère à soupe d'huile végétale</span></li>
-                                <li><span class="quantity-salt">2</span><span class="ingredient-salt"> pincées de sel</span></li>
+                                <li><span class="quantity-flour">500</span><span class="ingredient-flour"> g de farine</span></li>
+                                <li><span class="quantity-milk">1</span><span class="ingredient-milk"> mL de lait végétal</span></li>
+                                <li><span class="quantity-cornstarch">50</span><span class="ingredient-cornstarch"> g de fécule de maïs</span></li>
+                                <li><span class="quantity-oil">2</span><span class="ingredient-oil"> cuillère(s) à soupe d'huile végétale</span></li>
+                                <li><span class="quantity-salt">2</span><span class="ingredient-salt"> pincée(s) de sel</span></li>
                             </ul>
                             <h3 class="recipe-title-open">préparation</h3>
                             <ul class="recipe-ul-open">
-                                <li> Dans un cul de poule, faire un puit avec la farine</li>
-                                <li>Ajouter les oeufs un par un et mélanger au fur et à mesure.</li>
-                                <li>Incorporer le lait de vache à la préparation petit à petit jusqu’à optenir une pâte fluide, ni trop liquide, ni trop épaisse.</li>
-                                <li>Ajouter le sel et l’huile.</li>
-                                <li>Laisser reposer la pâte au moins 1 heure.</li>
+                                <li>Dans un cul de poule, faire un puit avec la farine et la fécule de maïs</li>
+                                <li>Verser le lait végétal progressivement en mélangeant avec un fouet</li>
+                                <li>Quand vous avez une pâte fluide et épaisse, ajouter le sel et l'huile</li>
+                                <li>Laisser reposer la pâte au moins 1 heure</li>
                             </ul>
+                            <div class="arrow-top"><img src="./chevron-up.svg" alt="arrow-top" height="20px" width="20px"></div>
                         </div>
-                        <button class="button">Go</button>
                     </div>
+
                     <div class="slides swiper-slide">
-                        <h1 class="recipe-title">Pâte à crêpes au sirop d'érable</h1>
+                        <h1 class="recipe-title">Pancake</h1>
                         <p class="select-option">je veux/j'ai</p>
-                        <div class="quantities">
-                            <input class="quantity fourst" type="text" placeholder="Quantités">
-                            <select class="ingredients fourst" name="ingredients">
-                                <option value="floor">g de farine</option>
-                                <option value="milk">mL de lait</option>
-                                <option value="eggs">oeufs</option>
-                                <option value="crepe">crêpes</option>
-                            </select>
+                        <div>
+                            <div class="quantities">
+                                <input class="quantity fourst" type="text" placeholder="Quantités">
+                                <select class="ingredients fourst" name="ingredients">
+                                    <option value="flour">g de farine</option>
+                                    <option value="milk">mL de lait</option>
+                                    <option value="cornstarch">fécule de maïs</option>
+                                    <option value="eggs">oeuf(s)</option>
+                                    <option value="crepe">pancake(s)</option>
+                                </select>
+                            </div>
+                            <button class="button">Go</button>
                         </div>
-                        <div class="menu-open">
+                        <div class="menu-open recipe-pancake">
                             <p>Avec <span class="quantity-selected">500</span><span class="ingredient-selected"> g de farine</span>,</p>
-                            <p>je peux faire <span class="crepe-number">24</span> crêpes</p>
+                            <p>je peux faire <span class="crepe-number">24</span> pancake(s)</p>
                             <h3 class="recipe-title-open">ingrédients</h3>
                             <ul class="recipe-ul-open">
-                                <li><span class="quantity-floor">500</span><span class="ingredient-floor"> g de farine</span></li>
-                                <li><span class="quantity-milk">1</span><span class="ingredient-milk"> L de lait de vache</span></li>
-                                <li><span class="quantity-eggs">6</span><span class="ingredient-eggs"> oeufs</span></li>
-                                <li><span class="quantity-oil">2</span><span class="ingredient-oil"> cuillère à soupe d'huile végétale</span></li>
-                                <li><span class="quantity-salt">2</span><span class="ingredient-salt"> pincées de sel</span></li>
+                                <li><span class="quantity-flour">500</span><span class="ingredient-flour"> g de farine</span></li>
+                                <li><span class="quantity-cornstarch">50</span><span class="ingredient-cornstarch"> g de fécule de maïs</span></li>
+                                <li><span class="quantity-milk">1</span><span class="ingredient-milk"> mL de lait</span></li>
+                                <li><span class="quantity-eggs">6</span><span class="ingredient-eggs"> oeuf(s)</span></li>
+                                <li><span class="quantity-yeast">6</span><span class="ingredient-yeast">g de levure</span></li>
                             </ul>
                             <h3 class="recipe-title-open">préparation</h3>
                             <ul class="recipe-ul-open">
-                                <li> Dans un cul de poule, faire un puit avec la farine</li>
-                                <li>Ajouter les oeufs un par un et mélanger au fur et à mesure.</li>
-                                <li>Incorporer le lait de vache à la préparation petit à petit jusqu’à optenir une pâte fluide, ni trop liquide, ni trop épaisse.</li>
-                                <li>Ajouter le sel et l’huile.</li>
-                                <li>Laisser reposer la pâte au moins 1 heure.</li>
+                                <li>Battre les blancs en neige</li>
+                                <li>Dans un autre récipient mélanger la farine, la fécule de maïs, les jaunes d'oeuf et la levure</li>
+                                <li>Y verser le lait végétal progressivement en mélangeant avec un fouet</li>
+                                <li>Incorporer les blancs en neige à l'autre préparation délicatement</li>
+                                <li>Laisser reposer la pâte au moins 1 heure</li>
                             </ul>
+                            <div class="arrow-top"><img src="./chevron-up.svg" alt="arrow-top" height="20px" width="20px"></div>
                         </div>
-                        <button class="button">Go</button>
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
@@ -170,7 +183,7 @@
         <!-- https://github.com/nolimits4web/swiper -->
         <script src="./swiper-init-events.js"></script>
         <script src="./validation.js"></script>
-        <script src="./classic.js"></script>
+        <script src="./recipe.js"></script>
         <script src="./app.js"></script>
     </body>
 </html>

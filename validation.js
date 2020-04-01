@@ -12,8 +12,12 @@ const validation = {
                 messageElt.style.color = 'red';
                 messageElt.textContent = 'Valeur incorrecte';
                 messageElt.style.fontSize = '0.8em';
-                messageElt.style.textAlign = "center";
                 messageElt.style.marginTop = "0.5em";
+                messageElt.style.position = "absolute";
+                messageElt.style.fontWeight= "bold";
+                messageElt.style.textDecoration = "underline";
+                messageElt.style.left = '50%';
+                messageElt.style.marginLeft = '-43.5px';
                 input.style.borderColor="red";
     
                 divInputs.after(messageElt);

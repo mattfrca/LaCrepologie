@@ -2,6 +2,10 @@ var swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
     spaceBetween: 20,
     grabCursor: true,
+    longSwipes: true,
+    longSwipesRatio: 0.15,
+    longSwipesMs: 100,
+    shortSwipes: false,
     centeredSlides: true,
     slidesPerView: 'auto',
     coverflowEffect: {
@@ -55,19 +59,19 @@ swiper.on('transitionEnd', () => {
         case 2:
             body.style.cssText = 'background-color: #D7DFA0';
             body.style.transition = 'background-color .8s';
-            mainDescription.innerText = 'je suis donc végé';
-            mainDescription.style.left = '-60px';
-            mainDescription.style.top = '-30px';
+            mainDescription.innerText = 'my food doesn\'t scream';
+            mainDescription.style.left = '-70px';
+            mainDescription.style.top = '-50px';
             mainDescription.style.marginRight = '1em';
             crepe.style.transform = 'rotate(150deg)';
             crepe.style.transition = 'transform .8s, top .8s, left.8s';
-            crepe.style.top = '100px';
-            crepe.style.left = '80px';
+            crepe.style.top = '110px';
+            crepe.style.left = '85px';
             break;
         case 3:
             body.style.cssText = 'background-color: #CD5C5C';
             body.style.transition = 'background-color .8s';
-            mainDescription.innerText = 'tomber en amour';
+            mainDescription.innerText = 'soft and fluffy';
             mainDescription.style.left = '-80px';
             mainDescription.style.top = '30px';
             mainDescription.style.marginRight = '1em';

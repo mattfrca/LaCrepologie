@@ -71,14 +71,19 @@ const app = {
         app.ingredients = evt.target.parentNode.querySelector('select').value;
 
         const input = evt.target.parentNode.querySelector('input');
-        
+
         if (validation.inputValidation(app.quantity, input)) {
+
             switch (app.currentPage) {
                 case "classic":
-                    classic.recipe(app.ingredients, app.quantity);
+                    recipe.currentRecipe = recipe.classic;
+                    recipe.init(app.ingredients, app.quantity, evt.target.parentNode.parentNode);
+                    break;
+                case "vegan":
+                    recipe.currentRecipe = recipe.vegan;
+                    recipe.init(app.ingredients, app.quantity, evt.target.parentNode.parentNode);
                     break;
                 default:
-                    app.classic();
                     break;
             }
         }
