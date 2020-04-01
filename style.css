@@ -59,11 +59,12 @@ body {
 }
 .swiper-container {
     width: 100%;
-    padding: 20px 50px;
+    padding: 100px 50px 0px;
     position: absolute;
     transition: top .8s;
-    /* top: 100px; */
-    /* top 100px si menu affiché; */
+    top: 370px;
+    /* top: 0px; */
+    /* top 0px si menu affiché; */
 }
 .swiper-button-next, .swiper-button-prev {
     color: black;
@@ -71,6 +72,7 @@ body {
 .slides {
     margin: 1em auto;
     width: 60%;
+    max-width: 450px;
     min-width: 300px;
     background-color: linen;
     border-radius: 30px 0;
@@ -121,7 +123,7 @@ body {
     /* petit test; */
     transition: font-size 0.3s;
 }
-.quantity:focus {
+.quantity:focus, .quantity:hover {
     font-size: 1.2rem;
     /* petit test; */
 }
@@ -156,6 +158,12 @@ body {
     border-radius: 8px;
     /* petit test; */
     transition: font-size 0.3s;
+}
+.ingredients:hover, .ingredients:focus {
+    font-size: 1.2rem;
+}
+.ingredients:hover ~ .quantity {
+    font-size: 1.2rem;
 }
 .button {
     position: relative;
