@@ -6,22 +6,25 @@ const app = {
 
     init: function () {
         // Ici, on définira quelle recette appeler
-        
-        const buttonClassic = document.getElementsByClassName('button')[swiper.realIndex + 4];
-        const inputClassic = document.getElementsByClassName('quantities')[swiper.realIndex + 4];
+        const buttonClassic = document.querySelectorAll('.button');
+        const inputClassic =document.querySelectorAll('.quantities');
 
-        console.log(buttonClassic);
-        console.log(inputClassic);
+        for (let i = 0; i < buttonClassic.length; i++) {
+            buttonClassic[i].addEventListener("click", app.handleClickButton);
+        }
+
+        for (let i = 0; i < inputClassic.length; i++) {
+            inputClassic[i].addEventListener("input", app.handleChangeInput);
+        }
+
         // ici on écoute l'input
-        inputClassic.addEventListener("input", app.handleChangeInput);
+        // inputClassic.addEventListener("input", app.handleChangeInput);
         // ici on écoute le bouton "go"
-        buttonClassic.addEventListener("click", app.handleClickButton);
+        // buttonClassic.addEventListener("click", app.handleClickButton);
         
-        console.log(swiper.realIndex)
     },
 
     handleChangeInput: function (evt) {
-        console.log("test");
         evt.target.style.border = "lightgray solid 1px";
         const errorElt = document.querySelector('.error');
         if (errorElt) {
@@ -30,13 +33,19 @@ const app = {
     },
 
     handleClickButton: function (evt) {
-        app.quantity = parseInt(document.querySelector('.quantity').value);
-        app.ingredients = document.querySelector('.ingredients').value;
+
+        app.quantity = parseInt(evt.target.parentNode.querySelector('input').value);
+        app.ingredients = evt.target.parentNode.querySelector('select').value;
+
+        console.log(app.quantity);
+        console.log(app.ingredients);
+
+        const input = evt.target.parentNode.querySelector('input');
         
-        if (validation.inputValidation(app.quantity)) {
+        if (validation.inputValidation(app.quantity, input)) {
             switch (app.currentPage) {
                 case "classic":
-                    app.cassic();
+                    app.classic();
                     console.log('classic');
                     break;
                 default:

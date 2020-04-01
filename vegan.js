@@ -48,9 +48,17 @@ const vegan = {
 
     cornstarchFunc: function(cornstarchUser) {
         let neededMilk = Math.round((cornstarchUser * vegan.milk)/vegan.cornstarch);
-        let neededCornstarch = Math.round((cornstarchUser * vegan.flour)/vegan.cornstarch)
+        let neededFlour = Math.round((cornstarchUser * vegan.flour)/vegan.cornstarch)
         let neededOil = Math.round((cornstarchUser * vegan.oil)/vegan.cornstarch);
         let neededSalt = Math.round((cornstarchUser * vegan.salt)/vegan.cornstarch);
         let crepeGet = Math.round((cornstarchUser * vegan.crepe)/vegan.cornstarch);
+    },
+
+    crepeFunc: function(crepeUser) {
+        let neededMilk = Math.round((crepeUser * vegan.milk)/vegan.crepe);
+        let neededFlour = Math.round((crepeUser * vegan.flour)/vegan.crepe)
+        let neededCornstarch = Math.round((crepeUser * vegan.flour)/vegan.crepe)
+        let neededOil = Math.round((crepeUser * vegan.oil)/vegan.crepe);
+        let neededSalt = Math.round((crepeUser * vegan.salt)/vegan.crepe);    
     },
 };
