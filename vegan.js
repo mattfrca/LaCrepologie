@@ -30,6 +30,10 @@ const vegan = {
         }
     },
 
+    showModal: function(milk, flour, conrstarch, oil, salt, crepe) {
+
+    }
+
     milkFunc: function(milkUser) {
         let neededFlour = Math.round((milkUser * vegan.flour)/vegan.milk);
         let neededCornstarch = Math.round((milkUser * vegan.cornstarch)/vegan.milk)
@@ -39,7 +43,7 @@ const vegan = {
     },
 
     flourFunc: function(flourUser) {
-        let neededMilk = Math.round((flourUser * vegan.milk)/vegan.flour);
+        let neededMilk = Math.raound((flourUser * vegan.milk)/vegan.flour);
         let neededCornstarch = Math.round((flourUser * vegan.cornstarch)/vegan.flour)
         let neededOil = Math.round((flourUser * vegan.oil)/vegan.flour);
         let neededSalt = Math.round((flourUser * vegan.salt)/vegan.flour);

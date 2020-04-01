@@ -17,6 +17,11 @@ const app = {
             inputClassic[i].addEventListener("input", app.handleChangeInput);
         }
 
+        document.querySelector('.swiper-button-next').addEventListener('click', app.handleClickArrow);
+        document.querySelector('.swiper-button-prev').addEventListener('click', app.handleClickArrow);
+
+
+
         // ici on écoute l'input
         // inputClassic.addEventListener("input", app.handleChangeInput);
         // ici on écoute le bouton "go"
@@ -24,9 +29,29 @@ const app = {
         
     },
 
+    // enlever message erreur et bordure rouge
+    handleClickArrow: function () {
+        // Ici, on suprimer toute les border rouge éventuel ainsi que les message d'erreur.
+        // Cette fonction est appeler lors du clique sur les flêches.
+
+        const allErrorMessage = document.getElementsByClassName('error');
+        const allErrorInput = document.getElementsByClassName('quantity');
+
+        // Sélection de la totalité des messages erreur et vidage
+        for (let i = 0; i < allErrorMessage.length; i++) {
+            allErrorMessage[i].textContent = "";
+        }
+
+        // Sélection de la totalité des input et remise à zéro
+        for (let i = 0; i < allErrorInput.length; i++) {
+            allErrorInput[i].style.borderColor = "transparent";
+            allErrorInput[i].value = "";
+        }
+    },
+
     handleChangeInput: function (evt) {
-        evt.target.style.border = "lightgray solid 1px";
-        const errorElt = document.querySelector('.error');
+        evt.target.style.borderColor = "transparent";
+        const errorElt = evt.target.parentNode.parentNode.querySelector('.error');
         if (errorElt) {
             errorElt.textContent = "";
         }
@@ -34,29 +59,29 @@ const app = {
 
     handleClickButton: function (evt) {
 
+        evt.target.style.borderColor = "transparent";
+        
+        // sélection du after
+        const errorElt = evt.target.parentNode.parentNode.querySelector('.error');
+        if (errorElt) {
+            errorElt.textContent = "";
+        }
+
         app.quantity = parseInt(evt.target.parentNode.querySelector('input').value);
         app.ingredients = evt.target.parentNode.querySelector('select').value;
-
-        console.log(app.quantity);
-        console.log(app.ingredients);
 
         const input = evt.target.parentNode.querySelector('input');
         
         if (validation.inputValidation(app.quantity, input)) {
             switch (app.currentPage) {
                 case "classic":
-                    app.classic();
-                    console.log('classic');
+                    classic.recipe(app.ingredients, app.quantity);
                     break;
                 default:
                     app.classic();
                     break;
             }
         }
-    },
-
-    classic: function () {
-        classic.recipe(app.ingredients, app.quantity);
     },
 
 };

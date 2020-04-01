@@ -32,6 +32,17 @@ const classic = {
         }
     },
 
+    showModal: function(eggs, milk, flour, oil, salt, crepe) {
+        const menuOpen = document.querySelector('.menu-open');
+        const swiperContainer = document.querySelector('.swiper-container');
+        const whiteCircle = document.querySelector('#white-circle');
+        console.log(menuOpen);
+
+        menuOpen.style.display = "block";
+        swiperContainer.style.top = "0px";
+        whiteCircle.style.display = "none";
+    },
+
     // Calcule des ingrédients en fonction de la donnée milk
     milkFunc: function(milkUser) {
         let neededEggs = Math.round((milkUser * classic.eggs)/classic.milk);
@@ -39,6 +50,8 @@ const classic = {
         let neededOil = Math.round((milkUser * classic.oil)/classic.milk);
         let neededSalt = Math.round((milkUser * classic.salt)/classic.milk);
         let crepeGet = Math.round((milkUser * classic.crepe)/classic.milk);
+
+        classic.showModal(neededEggs, milkUser, neededFlour, neededOil, neededSalt, crepeGet);
     },
 
     // Calcule des ingrédients en fonction de la donnée eggs
@@ -48,6 +61,8 @@ const classic = {
         let neededOil = Math.round((eggsUser * classic.oil)/classic.eggs);
         let neededSalt = Math.round((eggsUser * classic.salt)/classic.eggs);
         let crepeGet = Math.round((eggsUser * classic.crepe)/classic.eggs);
+
+        classic.showModal(eggsUser, neededMilk, neededFlour, neededOil, neededSalt, crepeGet);
     },
 
     // Calcule des ingrédients en fonction de la donnée flour
@@ -57,6 +72,8 @@ const classic = {
         let neededOil = Math.round((flourUser * classic.oil)/classic.flour);
         let neededSalt = Math.round((flourUser * classic.salt)/classic.flour);
         let crepeGet = Math.round((flourUser * classic.crepe)/classic.flour);
+
+        classic.showModal(neededEggs, neededMilk, flourUser, neededOil, neededSalt, crepeGet);
     },
 
     // Calcule des ingrédients en fonction de la donnée crepe
@@ -66,6 +83,8 @@ const classic = {
         let neededEggs = Math.round((crepeUser * classic.eggs)/classic.crepe);
         let neededOil = Math.round((crepeUser * classic.oil)/classic.crepe);
         let neededSalt = Math.round((crepeUser * classic.salt)/classic.crepe);
+
+        classic.showModal(neededEggs, neededMilk, neededFlour, neededOil, neededSalt, crepeUser);
     },
 
 };
