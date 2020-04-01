@@ -79,19 +79,15 @@ const app = {
 
             switch (app.currentPage) {
                 case "recipe-classic":
-                    recipe.currentRecipe = recipe.classic;
                     recipe.init(app.ingredients, app.quantity, evt.target.parentNode.parentNode);
                     break;
                 case "recipe-vegan":
-                    recipe.currentRecipe = recipe.vegan;
                     recipe.init(app.ingredients, app.quantity, evt.target.parentNode.parentNode);
                     break;
                 case "recipe-bretonne":
-                    recipe.currentRecipe = recipe.bretonne;
                     recipe.init(app.ingredients, app.quantity, evt.target.parentNode.parentNode);
                     break;
                 case "recipe-pancake":
-                    recipe.currentRecipe = recipe.pancake;
                     recipe.init(app.ingredients, app.quantity, evt.target.parentNode.parentNode);
                     break;
                 default:

@@ -1,6 +1,18 @@
 const recipe = {
 
     // Recette minimale (1 oeuf) 3,9 crêpes
+
+    vide: {
+        milk: 0,
+        flour: 0,
+        eggs: 0,
+        cornstarch: 0,
+        oil: 0,
+        salt: 0,
+        crepe: 0,
+        water: 0,
+        yeast: 0,
+    },
     classic: {
         milk: 166.67,
         flour: 83.34,
@@ -44,7 +56,6 @@ const recipe = {
         crepe: 0,
         yeast: 3,
     },
-    currentRecipe: {}, // a supprimer plus tard
 
     classicRecipe: {},
     
@@ -72,6 +83,7 @@ const recipe = {
                 recipe.quantity = ' ' + quantity + ' mL ';
                 recipe.classicRecipe = recipe.milkFunc(quantity, recipe.classic);
                 recipe.veganRecipe = recipe.milkFunc(quantity, recipe.vegan);
+                recipe.bretonRecipe = recipe.vide;
                 recipe.pancakeRecipe = recipe.milkFunc(quantity, recipe.pancake);
                 recipe.showModal();
                 break;
@@ -80,7 +92,7 @@ const recipe = {
                 recipe.element = 'oeuf(s)';
                 recipe.quantity = ' ' + quantity + ' ';
                 recipe.classicRecipe = recipe.eggsFunc(quantity, recipe.classic);
-                // recipe.veganRecipe = recipe.eggsFunc(0, recipe.vegan);
+                recipe.veganRecipe = recipe.vide;
                 recipe.bretonRecipe = recipe.eggsFunc(quantity, recipe.bretonne);
                 recipe.pancakeRecipe = recipe.eggsFunc(quantity, recipe.pancake);
                 recipe.showModal();
@@ -140,6 +152,7 @@ const recipe = {
         for (let i = 0; i < menuOpen.length; i++) {
             menuOpen[i].style.display = "block";
 
+            // Récupération des quantités et ingrédients sélectionnés
             menuOpen[i].querySelector('.quantity-selected').textContent = recipe.quantity;
             menuOpen[i].querySelector('.ingredient-selected').textContent = recipe.element;
 
@@ -224,7 +237,7 @@ const recipe = {
             flour: neededFlour,
             oil: neededOil,
             salt: neededSalt,
-            crepes: crepeGet,
+            crepe: crepeGet,
             cornstarch: neededCornstarch, 
             water: neededWater,
             yeast: neededYeast,
@@ -248,7 +261,7 @@ const recipe = {
             flour: flourUser,
             oil: neededOil,
             salt: neededSalt,
-            crepes: crepeGet,
+            crepe: crepeGet,
             cornstarch: neededCornstarch, 
             water: neededWater,
             yeast: neededYeast,
@@ -273,7 +286,7 @@ const recipe = {
             flour: neededFlour,
             oil: neededOil,
             salt: neededSalt,
-            crepes: crepeUser,
+            crepe: crepeUser,
             cornstarch: neededCornstarch, 
             water: neededWater,
             yeast: neededYeast,
@@ -297,7 +310,7 @@ const recipe = {
             flour: neededFlour,
             oil: neededOil,
             salt: neededSalt,
-            crepes: crepeGet,
+            crepe: crepeGet,
             cornstarch: cornstarchUser, 
             water: neededWater,
             yeast: neededYeast,
@@ -321,7 +334,7 @@ const recipe = {
             oil: neededOil,
             salt: neededSalt,
             eggs: neededEggs,
-            crepes: crepeGet,
+            crepe: crepeGet,
             cornstarch: neededCornstarch, 
             water: waterUser,
             yeast: neededYeast,
