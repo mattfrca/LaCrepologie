@@ -2,7 +2,7 @@ const app = {
 
     quantity: 0,
     ingredients: "",
-    currentPage: "classic",
+    currentPage: "",
 
     init: function () {
         // Ici, on définira quelle recette appeler
@@ -61,6 +61,9 @@ const app = {
 
         evt.target.style.borderColor = "transparent";
         
+        // Sélection de la class de la recette courante de la modale ouverte (avec recette)
+        const currentDiv = evt.target.parentNode.parentNode.querySelector('.menu-open').classList[1];
+        app.currentPage = currentDiv;
         // sélection du after
         const errorElt = evt.target.parentNode.parentNode.querySelector('.error');
         if (errorElt) {
@@ -71,16 +74,24 @@ const app = {
         app.ingredients = evt.target.parentNode.querySelector('select').value;
 
         const input = evt.target.parentNode.querySelector('input');
-
+        
         if (validation.inputValidation(app.quantity, input)) {
 
             switch (app.currentPage) {
-                case "classic":
+                case "recipe-classic":
                     recipe.currentRecipe = recipe.classic;
                     recipe.init(app.ingredients, app.quantity, evt.target.parentNode.parentNode);
                     break;
-                case "vegan":
+                case "recipe-vegan":
                     recipe.currentRecipe = recipe.vegan;
+                    recipe.init(app.ingredients, app.quantity, evt.target.parentNode.parentNode);
+                    break;
+                case "recipe-bretonne":
+                    recipe.currentRecipe = recipe.bretonne;
+                    recipe.init(app.ingredients, app.quantity, evt.target.parentNode.parentNode);
+                    break;
+                case "recipe-pancake":
+                    recipe.currentRecipe = recipe.pancake;
                     recipe.init(app.ingredients, app.quantity, evt.target.parentNode.parentNode);
                     break;
                 default:
