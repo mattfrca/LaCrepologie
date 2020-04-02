@@ -15,6 +15,7 @@ const app = {
         const button = document.querySelectorAll('.button');
         const input = document.querySelectorAll('.quantity');
         const select = document.querySelectorAll('.ingredients');
+        const arrowTop = document.querySelectorAll('.arrow-top');
 
         // On fait ensuite une bloucle dessus pour mettre en place les listeners
         for (let i = 0; i < button.length; i++) {
@@ -26,6 +27,9 @@ const app = {
         }
         for (let i = 0; i < select.length; i++) {
             select[i].addEventListener('change', app.handleChangeSelect);
+        }
+        for (let i = 0; i < arrowTop.length; i++) {
+            arrowTop[i].addEventListener('click', app.handleCloseModal);
         }
 
     },
@@ -58,6 +62,20 @@ const app = {
         const errorElt = state.currentPage.div.querySelector('.error');
         if (errorElt) {
             errorElt.textContent = "";
+        }
+    },
+
+    handleCloseModal: function() {
+        const menuOpen = document.getElementsByClassName('menu-open');
+        const swiperContainer = document.querySelector('.swiper-container');
+        const whiteCircle = document.querySelector('#white-circle');
+
+        whiteCircle.style.display = "block";
+        swiperContainer.style.top = "370px";
+
+        // boucle qui ouvre toutes les modales au button click
+        for (let i = 0; i < menuOpen.length; i++) {
+            menuOpen[i].style.display = "none";
         }
     },
 
