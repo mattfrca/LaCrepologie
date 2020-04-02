@@ -5,7 +5,7 @@ const state = {
     },
     currentInput:0,
     currentSelect:"flour",
-    
+
     classicRecipe: {},
     
     pancakeRecipe: {},
@@ -13,4 +13,8 @@ const state = {
     bretonRecipe: {},
     
     veganRecipe: {},
+
+    elementMessage: "",
+
+    quantityMessage: 0,
 };
