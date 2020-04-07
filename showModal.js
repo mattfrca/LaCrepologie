@@ -74,7 +74,7 @@ const showModal = () => {
             flour: neededFlour,
             oil: neededOil,
             salt: neededSalt,
-            crepes: crepeGet,
+            crepe: crepeGet,
             cornstarch: neededCornstarch, 
             water: neededWater,
             yeast: neededYeast,
@@ -217,7 +217,7 @@ const showModal = () => {
             
         case "eggs":
             state.elementMessage = 'oeuf(s)';
-            state.quantityMessage = ' ' + state.currentInputœ + ' ';
+            state.quantityMessage = ' ' + state.currentInput + ' ';
             state.classicRecipe = eggsFunc(state.currentInput, datas.Recipes.classic);
             state.bretonRecipe = eggsFunc(state.currentInput, datas.Recipes.bretonne);
             state.pancakeRecipe = eggsFunc(state.currentInput, datas.Recipes.pancake);
@@ -231,6 +231,16 @@ const showModal = () => {
             state.veganRecipe = flourFunc(state.currentInput, datas.Recipes.vegan);
             state.bretonRecipe = flourFunc(state.currentInput, datas.Recipes.bretonne);
             state.pancakeRecipe = flourFunc(state.currentInput, datas.Recipes.pancake);
+            show();
+            break;
+        
+        case "water":
+            state.elementMessage = 'd\'eau';
+            state.quantityMessage = ' ' + state.currentInput + ' mL ';
+            state.classicRecipe = waterFunc(state.currentInput, datas.Recipes.classic);
+            state.veganRecipe = waterFunc(state.currentInput, datas.Recipes.vegan);
+            state.bretonRecipe = waterFunc(state.currentInput, datas.Recipes.bretonne);
+            state.pancakeRecipe = waterFunc(state.currentInput, datas.Recipes.pancake);
             show();
             break;
 

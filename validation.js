@@ -39,7 +39,19 @@ const validation = function () {
                     error();
                 }
                 return false;
-                break;
+            case 'water':
+                if(state.currentInput !== ""
+                && Number.isInteger(state.currentInput)
+                && state.currentInput != NaN
+                && state.currentInput != 0
+                && state.currentInput >= recipe.water) {
+                    return true;
+                }else if(state.currentInput < recipe.water) {
+                    error(`Il faut au moins ${recipe.water} mL d'eau`);
+                }else {
+                    error();
+                }
+                return false;
             case 'milk':
                 if(state.currentInput !== ""
                 && Number.isInteger(state.currentInput)
@@ -53,7 +65,6 @@ const validation = function () {
                     error();
                 }
                 return false;
-                break;
             case 'eggs':
                 if(state.currentInput !== ""
                 && Number.isInteger(state.currentInput)
@@ -67,7 +78,6 @@ const validation = function () {
                     error();
                 }
                 return false;
-                break;
             case 'cornstarch':
                 if(state.currentInput !== ""
                 && Number.isInteger(state.currentInput)
@@ -81,7 +91,6 @@ const validation = function () {
                     error();
                 }
                 return false;
-                break;
             case 'crepe':
                 if(state.currentInput !== ""
                 && Number.isInteger(state.currentInput)

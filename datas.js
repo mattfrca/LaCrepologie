@@ -40,7 +40,7 @@ const datas = {
             cornstarch: 15,
             oil: 0,
             salt: 0,
-            crepe: 0,
+            crepe: 1,
             yeast: 3,
         },
         vide: {

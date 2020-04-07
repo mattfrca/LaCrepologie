@@ -172,6 +172,7 @@ body {
     border: 1px solid transparent;
     /* petit test; */
     transition: font-size 0.3s;
+    size: 2;
 }
 .ingredients:hover, .ingredients:focus {
     font-size: 1rem;

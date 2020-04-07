@@ -19,7 +19,6 @@ const app = {
 
         // On fait ensuite une bloucle dessus pour mettre en place les listeners
         for (let i = 0; i < button.length; i++) {
-            console.log()
             button[i].addEventListener("click", app.handleClickButton);
         }
         for (let i = 0; i < input.length; i++) {
@@ -54,7 +53,6 @@ const app = {
     },
 
     handleChangeSelect: function(evt) {
-        console.log(state.currentInput);
         state.currentSelect = evt.target.value;
 
         const input = state.currentPage.div.querySelector('.quantity');
