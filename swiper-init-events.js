@@ -1,4 +1,4 @@
-var swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
     spaceBetween: 20,
     grabCursor: true,
@@ -24,10 +24,39 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
-// swiper.on('progress', (progress) => {
-//     console.log(progress);
-// });
+
+swiper.on('slideChange', () => {
+     // Ici, on suprimer toute les border rouge éventuel ainsi que les message d'erreur.
+    // Cette fonction est appeler lors du clique sur les flêches.
+    
+    const allErrorMessage = document.getElementsByClassName('error');
+    const allErrorInput = document.getElementsByClassName('quantity');
+    const allSelect = document.querySelectorAll('select');
+
+    // A chaque changement de page, on voudrait que l'ingredient selectionné par défault soit la farine
+    for (let i = 0; i < allSelect.length; i++) {
+        allSelect[i].value = "flour";
+    }
+
+    // Sélection de la totalité des messages erreur
+    for (let i = 0; i < allErrorMessage.length; i++) {
+        allErrorMessage[i].textContent = "";
+    }
+
+    // Sélection de la totalité des input et remise à zéro
+    for (let i = 0; i < allErrorInput.length; i++) {
+        allErrorInput[i].style.borderColor = "transparent";
+        allErrorInput[i].value = "";
+    }
+
+});
+
 swiper.on('transitionEnd', () => {
+    // On met a jour le state ici:
+    state.currentPage.div = document.getElementsByClassName('swiper-slide-active')[0];
+    state.currentPage.name = state.currentPage.div.classList[2];
+    state.currentInput = "";
+
     let body = document.getElementsByTagName('body')[0];
     let mainDescription = document.getElementById('main-description');
     let crepe = document.getElementById('crepe');

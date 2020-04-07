@@ -21,13 +21,13 @@
             </div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="slides swiper-slide">
+                    <div class="slides swiper-slide slide-classic">
                         <h1 class="recipe-title">Pâte à crêpes classique</h1>
                         <p class="select-option">je veux/j'ai</p>
                         <div>
                             <div class="quantities">
                                 <input class="quantity first" type="text" placeholder="Quantités">
-                                <select class="ingredients first" name="ingredients">
+                                <select class="ingredients first" name="ingredients" size="2">
                                     <option value="flour">g de farine</option>
                                     <option value="milk">mL de lait</option>
                                     <option value="eggs">oeuf(s)</option>
@@ -62,13 +62,13 @@
                         </div>
                         <!-- A cacher -->
                     </div>
-                    <div class="slides swiper-slide">
+                    <div class="slides swiper-slide slide-bretonne">
                         <h1 class="recipe-title">Galette bretonne</h1>
                         <p class="select-option">je veux/j'ai</p>
                         <div>
                             <div class="quantities">
                                 <input class="quantity second" type="text" placeholder="Quantités">
-                                <select class="ingredients second" name="ingredients">
+                                <select class="ingredients second" name="ingredients" size="2">
                                     <option value="flour">g de farine</option>
                                     <option value="water">mL d'eau</option>
                                     <option value="eggs">oeuf(s)</option>
@@ -99,13 +99,13 @@
                             <div class="arrow-top"><img src="./chevron-up.svg" alt="arrow-top" height="20px" width="20px"></div>
                         </div>
                     </div>
-                    <div class="slides swiper-slide">
+                    <div class="slides swiper-slide slide-vegan">
                         <h1 class="recipe-title">Pâte à crêpes vegan</h1>
                         <p class="select-option">je veux/j'ai</p>
                         <div>
                             <div class="quantities">
                                 <input class="quantity third" type="text" placeholder="Quantités">
-                                <select class="ingredients third" name="ingredients">
+                                <select class="ingredients third" name="ingredients" size="2">
                                     <option value="flour">g de farine</option>
                                     <option value="milk">mL de lait</option>
                                     <option value="cornstarch">fécule de maïs</option>
@@ -136,13 +136,13 @@
                         </div>
                     </div>
 
-                    <div class="slides swiper-slide">
+                    <div class="slides swiper-slide slide-pancake">
                         <h1 class="recipe-title">Pancake</h1>
                         <p class="select-option">je veux/j'ai</p>
                         <div>
                             <div class="quantities">
                                 <input class="quantity fourst" type="text" placeholder="Quantités">
-                                <select class="ingredients fourst" name="ingredients">
+                                <select class="ingredients fourst" name="ingredients" size="2">
                                     <option value="flour">g de farine</option>
                                     <option value="milk">mL de lait</option>
                                     <option value="cornstarch">fécule de maïs</option>
@@ -182,8 +182,7 @@
         <script src="swiper.min.js"></script>
         <!-- https://github.com/nolimits4web/swiper -->
         <script src="./swiper-init-events.js"></script>
-        <script src="./validation.js"></script>
-        <script src="./recipe.js"></script>
-        <script src="./app.js"></script>
+        <script src="./state.js"></script>
+        <script type="module" src="./app.js"></script>
     </body>
 </html>
